@@ -20,14 +20,14 @@ a {
         transform: scale(1.1);
     }
 }
+
 .grid-wrap {
     width: 90%;
     height: auto;
     max-width: 1024px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 
         .logo {
             color: white;
@@ -49,6 +49,10 @@ nav {
     width: 100%;
     height: auto;
     background-color: #696969;
+}
+nav .grid-wrap {
+    flex-direction: row;
+    align-items: center;
 }
 @media screen and (min-width: 600px) {
     body {

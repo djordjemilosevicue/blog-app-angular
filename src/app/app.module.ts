@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ArticleComponent } from './article/article.component';
+import { BlogSingleComponent } from './blog-single/blog-single.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ArticleComponent } from './article/article.component';
     HomeComponent,
     DashboardComponent,
     ArticleComponent,
+    BlogSingleComponent,
   ],
   imports: [
     HttpClientModule,

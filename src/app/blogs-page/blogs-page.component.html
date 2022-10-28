@@ -1,1 +1,8 @@
-<h1>blogs-page works!</h1>
+<div class="grid-wrap">
+    <h1>blogs-page works!</h1>
+    <div *ngFor="let article of articles.data">
+        <pre>
+            {{ article | json }}
+        </pre>
+    </div>
+</div>

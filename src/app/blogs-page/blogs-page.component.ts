@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleService } from '../services/articles.service';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-blogs-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogsPageComponent implements OnInit {
 
-  constructor() { }
+  public test: any;
+  public articles: any = { data: [] };
 
-  ngOnInit(): void {
+  constructor(
+    private articleService: ArticleService
+  ) { }
+
+  async ngOnInit() {
+    this.articles = await lastValueFrom(this.articleService.getAll(0))
+    console.log(this.articles)
+
+    this.test = await lastValueFrom(this.articleService.getOne("65"))
   }
 
 }
