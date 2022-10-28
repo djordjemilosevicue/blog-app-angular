@@ -21,6 +21,10 @@ export class ArticleService {
     return this.http.get(`${this.endpoint}/${articleId}`);
   }
 
+  getComments(articleId: string) {
+    return this.http.get(`${this.endpoint}/${articleId}/comments`);
+  }
+
   create(article: any) {
     return this.http.post(this.endpoint + "?api_token=" + this.token, article)
   }

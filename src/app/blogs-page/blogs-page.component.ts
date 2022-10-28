@@ -9,7 +9,7 @@ import { lastValueFrom } from 'rxjs';
 })
 export class BlogsPageComponent implements OnInit {
 
-  public test: any;
+  public article: any;
   public articles: any = { data: [] };
 
   constructor(
@@ -18,9 +18,9 @@ export class BlogsPageComponent implements OnInit {
 
   async ngOnInit() {
     this.articles = await lastValueFrom(this.articleService.getAll(0))
-    console.log(this.articles)
 
-    this.test = await lastValueFrom(this.articleService.getOne("65"))
+    this.article = await lastValueFrom(this.articleService.getOne("3"))
+    console.log(this.article)
   }
 
 }
